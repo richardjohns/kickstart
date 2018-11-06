@@ -24,9 +24,16 @@ beforeEach (async () => {
         });
         // destructuring first element out of an array and assigning as campaignAddress
         [campaignAddress] = await factory.methods.getDeployedCampaigns().call();
-        
+
         campaign = await new web3.eth.Contract(
             JSON.parse(compiledCampaign.interface),
             campaignAddress
         );
+});
+
+describe('Campaigns', () => {
+    it('deploys a factory and a campaign', () => {
+        assert.ok(factory.options.address);
+        assert.ok(campaign.options.address);
+    })
 })
