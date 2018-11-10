@@ -8,26 +8,27 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _Header = require('./Header');
+
+var _Header2 = _interopRequireDefault(_Header);
+
+var _semanticUiReact = require('semantic-ui-react');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = '/Users/richardjohns/projects/kickstart/components/layout.js';
+var _jsxFileName = '/Users/richardjohns/projects/kickstart/components/Layout.js';
 
 exports.default = function (props) {
-    return _react2.default.createElement('div', {
+    return _react2.default.createElement(_semanticUiReact.Container, {
         __source: {
             fileName: _jsxFileName,
-            lineNumber: 5
+            lineNumber: 7
         }
-    }, _react2.default.createElement('h1', {
-        __source: {
-            fileName: _jsxFileName,
-            lineNumber: 6
-        }
-    }, 'I\'m a header'), props.children, _react2.default.createElement('h1', {
+    }, _react2.default.createElement(_Header2.default, {
         __source: {
             fileName: _jsxFileName,
             lineNumber: 8
         }
-    }, 'I\'m a footer'));
+    }), props.children);
 };
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvbGF5b3V0LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwicHJvcHMiLCJjaGlsZHJlbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQUEsQUFBTyxBQUVQOzs7Ozs7OztrQkFBZSxVQUFBLEFBQUMsT0FBVSxBQUN0QjsyQkFDSSxjQUFBOztzQkFBQTt3QkFBQSxBQUNJO0FBREo7QUFBQSxLQUFBLGtCQUNJLGNBQUE7O3NCQUFBO3dCQUFBO0FBQUE7QUFBQSxPQURKLEFBQ0ksQUFDQyx3QkFGTCxBQUVXLEFBQ1AsMEJBQUEsY0FBQTs7c0JBQUE7d0JBQUE7QUFBQTtBQUFBLE9BSlIsQUFDSSxBQUdJLEFBR1g7QUFSRCIsImZpbGUiOiJsYXlvdXQuanMiLCJzb3VyY2VSb290IjoiL1VzZXJzL3JpY2hhcmRqb2hucy9wcm9qZWN0cy9raWNrc3RhcnQifQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvTGF5b3V0LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiSGVhZGVyIiwiQ29udGFpbmVyIiwicHJvcHMiLCJjaGlsZHJlbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQUEsQUFBTzs7OztBQUNQLEFBQU8sQUFBWTs7OztBQUNuQixBQUFTLEFBRVQ7Ozs7OztrQkFBZSxVQUFBLEFBQUMsT0FBVSxBQUN0QjsyQkFDSSxBQUFDOztzQkFBRDt3QkFBQSxBQUNJO0FBREo7QUFBQSxLQUFBLGtCQUNJLEFBQUM7O3NCQUFEO3dCQURKLEFBQ0ksQUFDQztBQUREO0FBQUEsY0FGUixBQUNJLEFBRVcsQUFHbEI7QUFQRCIsImZpbGUiOiJMYXlvdXQuanMiLCJzb3VyY2VSb290IjoiL1VzZXJzL3JpY2hhcmRqb2hucy9wcm9qZWN0cy9raWNrc3RhcnQifQ==
