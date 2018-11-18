@@ -8,12 +8,13 @@ import web3 from '../../ethereum/web3';
 class CampaignNew extends Component {
     state = {
         minimumContribution: '',
-        errorMessage: ''
+        errorMessage: '',
+        loading: ''
     }
 
     onSubmit = async event => {
         event.preventDefault();
-
+        this.setState({ loading: true, errorMessage: '' })
         try {
             const accounts = await web3.eth.getAccounts();
             await factory.methods.createCampaign(this.state.minimumContribution)
@@ -24,6 +25,7 @@ class CampaignNew extends Component {
         } catch (err) {
             this.setState({ errorMessage: err.message })
         }
+        this.setState({ loading: false })
     }
 
     // error property below is used to show dialogbox - won't show as empty string interpreted as falsie until error recorded. Well... the message component doesn't like strings so coerce to opposite boolean then back again with !!
@@ -43,7 +45,7 @@ class CampaignNew extends Component {
                         />
                     </Form.Field>
                     <Message error header="Oops!" content={this.state.errorMessage} />
-                    <Button primary>Create</Button>
+                    <Button loading={!!this.state.loading} primary>Create</Button>
                 </Form>
             </Layout>
         )
