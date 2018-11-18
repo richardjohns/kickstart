@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Card, Button } from 'semantic-ui-react'
 import factory from '../ethereum/factory';
 import Layout from '../components/Layout'
+import { Link, Route } from '../routes'
 
 class CampaignIndex extends Component {
     // Can't use async componentDidMount to ask Next.js to call data from contract. 
@@ -16,7 +17,11 @@ class CampaignIndex extends Component {
         const items = this.props.campaigns.map(address => {
             return {
                 header: address,
-                description: <a>View Campaign</a>,
+                description: (
+                    <Link route={`/campaigns/${address}`}>
+                        <a>View Campaign</a>
+                    </Link>
+                ),
                 fluid: true
             }
         })
@@ -29,7 +34,9 @@ class CampaignIndex extends Component {
             <div>
                 <h3>Open Campaigns</h3>
                 <div>{this.renderCampaigns()}</div>
-                <Button content="Create Campaign" icon="add" primary style={{ marginTop: '10px' }} />
+                <Link route="/campaigns/new">
+                    <Button content="Create Campaign" icon="add" primary style={{ marginTop: '10px' }} />
+                </Link>
             </div>
         </Layout>
         )
