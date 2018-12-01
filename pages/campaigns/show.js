@@ -4,6 +4,7 @@ import Layout from '../../components/Layout'
 import Campaign from '../../ethereum/campaign'
 import web3 from 'web3'
 import ContributeForm from '../../components/ContributeForm'
+import { Link } from '../../routes'
 
 class CampaignShow extends Component {
     static async getInitialProps(props) {
@@ -73,6 +74,11 @@ class CampaignShow extends Component {
             <Grid>
                 <Grid.Column width={10}>
                     {this.renderCards()}
+                    <Link route={`/campaigns/${this.props.address}/requests`}>
+                        <a>
+                            <Button primary style={{ marginTop: '10px' }}>View Requests</Button>
+                        </a>
+                    </Link>
                 </Grid.Column>
 
                 <Grid.Column width={6}>
