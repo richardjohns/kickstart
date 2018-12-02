@@ -6,7 +6,7 @@
   "dependencies": {
     "fs-extra": "^7.0.0",
     "ganache-cli": "^6.1.8",
-    "next": "^4.1.4",
+    "next": "^4.2.3",
     "next-routes": "^1.4.2",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
@@ -21,7 +21,8 @@
   },
   "scripts": {
     "test": "mocha",
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC"
