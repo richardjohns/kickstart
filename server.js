@@ -17,3 +17,6 @@ app.prepare().then( () => {
     })
 })
 
+//     "heroku-postbuild": "next build",
+
+
