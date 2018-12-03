@@ -1,8 +1,6 @@
 {
     "version": 2,
     "builds": [
-        { "src": "*.html", "use": "@now/static" },
-        { "src": "package.json", "use": "@now/next" },
         { "src": "*.js", "use": "@now/node" }
     ],
     "github": {

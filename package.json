@@ -22,7 +22,8 @@
   "scripts": {
     "test": "mocha",
     "dev": "node server.js",
-    "start": "node server.js"
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
   },
   "author": "",
   "license": "ISC"
