@@ -22,8 +22,9 @@
   "scripts": {
     "test": "mocha",
     "dev": "node server.js",
-    "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "build": "./node_modules/next/dist/bin/next build",
+    "heroku-postbuild": "./node_modules/next/dist/bin/next build",
+    "start": "./node_modules/next/dist/bin/next build && NODE_ENV=production node server.js"
   },
   "author": "",
   "license": "ISC"
