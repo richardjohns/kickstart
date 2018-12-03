@@ -25,7 +25,8 @@
   "scripts": {
     "test": "mocha",
     "dev": "node server.js",
-    "build": "./node_modules/next/dist/bin/next build",
+    "build": "./node_modules/next/dist/bin/next-build",
+    "heroku-postbuild": "./node_modules/next/dist/bin/next-build",
     "start": "NODE_ENV=production node server.js"
   },
   "author": "",
