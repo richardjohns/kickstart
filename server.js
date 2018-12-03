@@ -18,5 +18,6 @@ app.prepare().then( () => {
 })
 
 //     "heroku-postbuild": "next build",
+//     "start": "NODE_ENV=production node server.js"
 
 
